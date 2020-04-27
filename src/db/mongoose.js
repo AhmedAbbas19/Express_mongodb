@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const { MongooseUri } = require("../../config");
 
 mongoose
-  .connect("mongodb://localhost:27017/todos", {
+  .connect(MongooseUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
